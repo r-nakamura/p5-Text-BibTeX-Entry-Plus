@@ -5,7 +5,6 @@ use FindBin;
 
 use Test::More;
 
-use Text::BibTeX;
 use Text::BibTeX::Entry::Plus;
 
 sub load_bibentry {
