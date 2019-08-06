@@ -4,12 +4,14 @@ Text::BibTeX::Entry::Plus - helper for exporting bibliography in an arbitrary fo
 
 # SYNOPSIS
 
-    use Text::BibTeX::Entry::Plus;
+```perl
+use Text::BibTeX::Entry::Plus;
 
-    $bibfile = Text::BibTeX::File->new('PATH_TO_BIBFILE');
-    $entry = Text::BibTeX::Entry::Plus->new($bibfile);
+$bibfile = Text::BibTeX::File->new('PATH_TO_BIBFILE');
+$entry = Text::BibTeX::Entry::Plus->new($bibfile);
 
-    $entry->export_as_string();
+$entry->export_as_string();
+```
 
 # DESCRIPTION
 
