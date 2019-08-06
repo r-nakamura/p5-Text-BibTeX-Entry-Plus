@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "helper for exporting bibliography in an arbitrary format from BibTeX files",
    "author" : [
-      "Ryo Nakamura <nakamura@zebulun.net>"
+      "Ryo Nakamura <nakamura[atmark]zebulun.net>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.5, CPAN::Meta::Converter version 2.150005",
@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Text::BibTeX" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,7 +53,21 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/r-nakamura/p5-Text-BibTeX-Entry-Plus/issues"
+      },
+      "homepage" : "https://github.com/r-nakamura/p5-Text-BibTeX-Entry-Plus",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/r-nakamura/p5-Text-BibTeX-Entry-Plus.git",
+         "web" : "https://github.com/r-nakamura/p5-Text-BibTeX-Entry-Plus"
+      }
+   },
    "version" : "0.01",
+   "x_contributors" : [
+      "Ryo Nakamura <nakamura@zebulun.net>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27300_01",
    "x_static_install" : 1
 }

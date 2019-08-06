@@ -214,15 +214,30 @@ __END__
 
 =head1 NAME
 
-Text::BibTeX::Entry::Plus - It's new $module
+Text::BibTeX::Entry::Plus - helper for exporting bibliography in an arbitrary format from BibTeX files
 
 =head1 SYNOPSIS
 
     use Text::BibTeX::Entry::Plus;
 
+    $bibfile = Text::BibTeX::File->new('PATH_TO_BIBFILE');
+    $entry = Text::BibTeX::Entry::Plus->new($bibfile);
+
+    $entry->export_as_string();
+
 =head1 DESCRIPTION
 
-Text::BibTeX::Entry::Plus is ...
+Text::BibTeX::Entry::Plus provides helper functions for exporting
+bibliography in an arbitrary format from BibTeX files, which is an
+extension of a Perl module, Text::BibTeX::Entry.
+
+Using Text::BibTeX::Entry::Plus, you can export your bibliography in
+arbitrary format (e.g., Text, HTML, and CSV) if you are familiar with
+Perl language.
+
+=head1 SEE ALSO
+
+Text::BibTeX(3pm)
 
 =head1 LICENSE
 
@@ -233,7 +248,7 @@ it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Ryo Nakamura E<lt>nakamura@zebulun.netE<gt>
+Ryo Nakamura <nakamura[atmark]zebulun.net>
 
 =cut
 
