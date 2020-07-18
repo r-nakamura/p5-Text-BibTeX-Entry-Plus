@@ -108,6 +108,7 @@ sub export_as_string {
     if ( $self->type() =~ /article/ ) {
         push @fields, $self->export_journal();
         push @fields, $self->export_volume();
+        push @fields, $self->export_issue();
         push @fields, $self->export_number();
     }
     elsif ( $self->type() =~ /inproceedings/ ) {
@@ -164,8 +165,14 @@ sub export_journal {
 
 sub export_volume {
     my $self = shift;
-    my $vol = $self->get( 'vol' );
+    my $vol = $self->get( 'volume' );
     return $vol ? "vol. $vol" : undef;
+}
+
+sub export_issue {
+    my $self = shift;
+    my $issue = $self->get( 'issue' );
+    return $issue ? "issue. $issue" : undef;
 }
 
 sub export_number {
