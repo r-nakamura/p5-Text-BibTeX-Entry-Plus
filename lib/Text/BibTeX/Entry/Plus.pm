@@ -143,7 +143,12 @@ sub export_author {
             $first = substr $first, 0, 1;
             "$first. $last";
         } @authors;
-        $author = join(', ', @authors[0 .. $#authors - 1]) . ' and ' . $authors[$#authors];
+        if (scalar(@authors) >= 2) {
+            $author = join(', ', @authors[0 .. $#authors - 1]) . ' and ' . $authors[$#authors];
+        }
+        else {
+            $author = $authors[0];
+        }
     }
     else {
         # for japanese kanji
